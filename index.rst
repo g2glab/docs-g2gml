@@ -11,9 +11,11 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   g2gml
+   contents/g2gml
    contents/mapper
-   pg
+   contents/pg-format
+   contents/pg-comparison
+   contents/pg-converters
 
 Indices and tables
 ==================
