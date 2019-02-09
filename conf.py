@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'g2gml'
+project = 'G2GML'
 copyright = '2019, ryotayamanaka'
 author = 'ryotayamanaka'
 
