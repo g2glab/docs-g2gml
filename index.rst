@@ -12,7 +12,7 @@ Contents:
    :maxdepth: 2
 
    contents/g2gml
-   contents/mapper
+   contents/g2g-mapper
    contents/pg-format
    contents/pg-comparison
    contents/pg-converters
