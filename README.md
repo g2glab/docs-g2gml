@@ -1,2 +1,2 @@
 # docs
-https://g2gml.readthedocs.io
+https://g2gml.readthedocs.io/
