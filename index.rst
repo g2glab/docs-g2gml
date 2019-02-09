@@ -12,8 +12,8 @@ Contents:
    :maxdepth: 2
 
    g2gml
-   g2g mapper
-   pg format
+   g2g-mapper
+   pg
 
 Indices and tables
 ==================
