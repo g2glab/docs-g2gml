@@ -34,6 +34,19 @@ Run (mapping against SPARQL endpoint):
 
     $ g2g musician.g2g http://ja.dbpedia.org/sparql
 
+Check the output file:
+
+    $ more output/musician/musician.pg
+
+`musician.pg`
+
+    "http://ja.dbpedia.org/resource/山本あき"       "http://ja.dbpedia.org/resource/藤圭子" :influenced
+    "http://ja.dbpedia.org/resource/崎谷健次郎"     "http://ja.dbpedia.org/resource/モーリス・ラヴェル"     :influenced
+    "http://ja.dbpedia.org/resource/崎谷健次郎"     "http://ja.dbpedia.org/resource/スティーヴィー・ワンダー"       :influenced
+    "http://ja.dbpedia.org/resource/新井裕子"       "http://ja.dbpedia.org/resource/アラニス・モリセット"   :influenced
+    "http://ja.dbpedia.org/resource/星野英彦"       "http://ja.dbpedia.org/resource/バウハウス_(バンド)"    :influenced
+    ..
+
 ## Local File Mode
 
 Download example turtle file:
@@ -68,4 +81,14 @@ Download example g2g file:
 
 Run (mapping against RDF data file):
 
-    $ g2g mini-01.g2g mini-01.ttl
+    $ g2g mini-05.g2g mini-05.ttl
+
+Check the output file:
+
+    $ more output/mini-05/mini-05.pg
+
+`mini-05.pg`
+
+    "http://example.org/person1"    "http://example.org/person2"    :follows        since:2017
+    "http://example.org/person1"    :person
+    "http://example.org/person2"    :person
