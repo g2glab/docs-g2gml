@@ -6,7 +6,7 @@ Set an alias to run docker container:
 
     $ alias g2g='docker run --rm -v $PWD:/work g2gml/g2g:0.2.1 g2g'
 
-Show help:
+Check if it works:
 
     $ g2g --help
 
@@ -21,10 +21,12 @@ Download example g2g file:
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     ..
+    
     # Node mappings
     (mus:Musician {vis_label:nam, born:dat, hometown:twn, pageLength:len})
         ?mus rdf:type foaf:Person, dbpedia-owl:MusicalArtist .
     ..
+    
     # Edge mappings
     (mus1:Musician)-[:same_group {label:nam, hometown:twn, pageLength:len}]->(mus2:Musician)
         ?grp a schema:MusicGroup ;
