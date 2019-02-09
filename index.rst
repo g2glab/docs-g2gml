@@ -15,5 +15,4 @@ Welcome to G2GML documentation!
    contents/pg-format
    contents/pg-comparison
    contents/pg-converters
-   contents/references
    contents/appendix-a
