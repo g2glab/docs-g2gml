@@ -5,7 +5,7 @@
 * There are many **graph databases** such as Neo4j, Oracle PGX, Amazon Neptune, ...
 * Different graph databases use different **property graph formats**.
 * We define generic **property graph (PG)** format and converters for various formats.
-* [[PG Comparison]] page describes the difference from other formats (GML, GraphSON, ..).
+* :doc:`PG Comparison <pg-comparison.md>` page describes the difference from other formats (GML, GraphSON, ..).
 
 ## Specifications
 
