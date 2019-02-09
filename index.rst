@@ -15,3 +15,4 @@ Welcome to g2gml documentation!
    contents/pg-format
    contents/pg-comparison
    contents/pg-converters
+   contents/references
