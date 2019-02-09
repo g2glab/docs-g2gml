@@ -1,3 +1,5 @@
+# G2GML
+
 ## Abstract
 
 Increasing amounts of scientific and social data are published in the **Resource Description Framework (RDF)**. Although the RDF data can be queried using the SPARQL language, even the SPARQL-based operation has a limitation in implementing traversal or analytical algorithms. Recently, a variety of graph database implementations dedicated to analyses on the **property graph model** have emerged. However, the RDF model and the property graph model are not interoperable. Here, we developed a framework based on the **Graph to Graph Mapping Language (G2GML)** for mapping RDF graphs to property graphs to make the most of accumulated RDF data. Using this framework, graph data described in the RDF model can be converted to the property graph model and can be loaded to several graph database engines for further analysis. Future works include implementing and utilizing graph algorithms to make the most of the accumulated data in various analytical engines.
