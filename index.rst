@@ -12,7 +12,7 @@ Contents:
    :maxdepth: 2
 
    g2gml
-   g2g-mapper
+   contents/mapper
    pg
 
 Indices and tables
