@@ -11,9 +11,13 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   intro
-   restructuredtext
-   markdown
+   g2gml
+   g2g mapper
+   pg format
 
 Indices and tables
 ==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
