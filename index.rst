@@ -16,3 +16,4 @@ Welcome to G2GML documentation!
    contents/pg-comparison
    contents/pg-converters
    contents/references
+   contents/appendix-a
