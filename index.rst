@@ -10,4 +10,4 @@ G2GML Documentation
    contents/pg-format
    contents/pg-comparison
    contents/pg-converters
-   contents/appendix-a
+   contents/references
