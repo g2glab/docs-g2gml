@@ -12,7 +12,7 @@ G2GML is RDF Graph to Property Graph Mapping Language.
 
     <prefix>
     
-    <property graph patterns>           <-- Cypher syntax
+    <property graph patterns>           <-- Cypher MATCH clause syntax
         <semantic graph patterns>       <-- SPARQL WHERE clause syntax
     
     ..
@@ -76,7 +76,7 @@ G2GML is RDF Graph to Property Graph Mapping Language.
     PREFIX : <http://example.org/>
     (p:Person)
         ?p a :Person .
-    (p1:Person)-[:follows]->(p2:Person)
+    (p1:Person)-[:follows]->(p2:Person)       <-- PG edge is defined
         ?p1 :follows ?p2 .
 
 `mini-03.pg`
@@ -97,6 +97,7 @@ G2GML is RDF Graph to Property Graph Mapping Language.
     PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
     # Node mappings
+    
     (mus:Musician {vis_label:nam, born:dat, hometown:twn, pageLength:len})
         ?mus rdf:type foaf:Person, dbpedia-owl:MusicalArtist .
         ?mus rdfs:label ?nam .
@@ -106,6 +107,7 @@ G2GML is RDF Graph to Property Graph Mapping Language.
         OPTIONAL { ?mus dbpedia-owl:wikiPageLength ?len }
 
     # Edge mappings
+    
     (mus1:Musician)-[:same_group {label:nam, hometown:twn, pageLength:len}]-(mus2:Musician)
         ?grp a schema:MusicGroup ;
              dbpedia-owl:bandMember ?mus1 , ?mus2 .
