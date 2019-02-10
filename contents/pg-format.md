@@ -1,11 +1,10 @@
 # PG Format
 
-## Background
+## Overview
 
 * There are many **graph databases** such as Neo4j, Oracle PGX, Amazon Neptune, ...
-* Different graph databases use different **property graph formats**.
-* We define generic **property graph (PG)** format and converters for various formats.
-* [PG Comparison](https://g2gml.readthedocs.io/en/latest/contents/pg-comparison.html) page describes the difference from other formats (GML, GraphSON, ..).
+* Different graph databases use different **property graph definitions and formats**.
+* We define **property graph (PG)** format and converters for various formats.
 
 ## Specifications
 
@@ -77,3 +76,43 @@ The values in each datatype can be written as follows:
 * double: number which contains period
 * string: double quoted if contains space, tab, or colon (:)
     * To escape double quote, use \\"
+
+## Comparison
+
+## Other Formats
+
+PG
+
+    # NODES
+    101  :person  name:"Barack Obama"  country:"United States"
+    102  :person  name:"Shinzo Abe"  country:Japan
+
+    # EDGES
+    101  104  :admires  score:20.0  since:2015
+    102  103  :collaborates  since:2010
+
+JSON-PG
+
+    {
+      "nodes":[
+        {"_id":101, "_label":"person", "name":"Barack Obama", "country":"United States"}
+      , {"_id":101, "_label":"person", "name":"Shinzo Abe", "country":"United States"}
+      ],
+      "edges":[
+        {"_from":101, "_to":104, "_label":"admires", "score":20.0, "since":2015}
+      , {"_from":102, "_to":103, "_label":"collaborates", "since":2010}
+      ]
+    }
+
+GraphSON
+
+    {
+      "nodes":[
+        {"_id":101, "_label":"person", "name":"Barack Obama", "country":"United States"}
+      , {"_id":101, "_label":"person", "name":"Shinzo Abe", "country":"United States"}
+      ],
+      "edges":[
+        {"_from":101, "_to":104, "_label":"admires", "score":20.0, "since":2015}
+      , {"_from":102, "_to":103, "_label":"collaborates", "since":2010}
+      ]
+    }
