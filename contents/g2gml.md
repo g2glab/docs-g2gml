@@ -1,23 +1,29 @@
 # G2GML
 
+G2GML is RDF Graph to Property Graph Mapping Language.
+
 ## Overview
 
-* G2GML defines mapping from semantic graphs to property graphs.
-* The mapping is described with a set of pairs of **semantic graph patterns** and **property graph patterns**.
-* The semantic graph patterns are written in WHERE clause syntax of **SPARQL**, while the property graph patterns are written in **Cypher** syntax.
+* G2GML defines mapping from RDF graphs to property graphs.
+* Mapping is described with a set of pairs of **RDF graph patterns** and **property graph patterns**.
+* RDF graph patterns are written in WHERE clause syntax of **SPARQL**, while the property graph patterns are written in MATCH clause syntax of **Cypher**.
 
-```
-<prefix>
+`sample.g2g`
 
-<property graph patterns>           <-- Cypher syntax
-    <semantic graph patterns>       <-- SPARQL WHERE clause syntax
-
-..
-```
+    <prefix>
+    
+    <property graph patterns>           <-- Cypher syntax
+        <semantic graph patterns>       <-- SPARQL WHERE clause syntax
+    
+    ..
 
 ## Minimal Examples
 
-### RDF Resource >> PG node
+* RDF Resource > PG node
+* RDF datatype property > PG node property
+* RDF object property > PG edge
+
+### RDF Resource > PG node
 
 `mini-01.ttl`
 
@@ -37,7 +43,7 @@
     "http://example.org/person1"	 :"Person"
 
 
-### RDF datatype property >> PG node property
+### RDF datatype property > PG node property
 
 `mini-02.ttl`
 
@@ -56,7 +62,7 @@
 
     "http://example.org/person1"	 :"Person"	"age":30
 
-### RDF object property >> PG edge
+### RDF object property > PG edge
 
 `mini-03.ttl`
 
