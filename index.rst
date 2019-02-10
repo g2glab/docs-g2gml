@@ -8,6 +8,5 @@ G2GML Documentation
    contents/g2gml
    contents/g2g-mapper
    contents/pg-format
-   contents/pg-comparison
    contents/pg-converters
    contents/references
