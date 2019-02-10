@@ -35,6 +35,7 @@ Create sample data:
 Run pg2pgx command for example:
 
     $ pg2pgx data.pg data
+    
     "data.pgx.nodes" has been created.
     "data.pgx.edges" has been created.
     "data.pgx.json" has been created.
