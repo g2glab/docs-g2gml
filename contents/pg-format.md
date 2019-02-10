@@ -79,7 +79,7 @@ The values in each datatype can be written as follows:
 
 ## Comparison
 
-## Other Formats
+### Other Formats
 
 PG
 
