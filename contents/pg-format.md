@@ -19,19 +19,20 @@ Example:
 102  :person  name:"Shinzo Abe"  country:Japan
 
 # EDGES
-101  104  :admires  score:20.0  since:2015
-102  103  :collaborates  since:2010
+101  -> 104  :admires  score:20.0  since:2015
+102  -- 103  :collaborates  since:2010
 ```
 
 ### Node lines
 
 ```
-<node_id>  :<label>  <prop1>:<value1>  <prop2>:<value2>  ...
+<node_id>  :<label1>  :<label2>  <prop1>:<value1>  <prop2>:<value2>  ...
 ```
 
 * All elements are separated by space or tab.
 * Node IDs have to be unique.
     * If there are multiple lines with the same Node ID, latter ones are ignored.
+* Each line can contain arbitrarily many labels.
 * Each line can contain arbitrarily many properties.
 
 Example:
@@ -45,20 +46,20 @@ Example:
 ### Edge lines
 
 ```
-<src_node_id>  <dst_node_id>  :<label>  <prop1>:<value1>  <prop2>:<value2>  ...
+<src_node_id>  [->|--] <dst_node_id>  :<label1>  :<label2>  <prop1>:<value1>  <prop2>:<value2>  ...
 ```
 
 * Basically, the same format as node lines.
-* However, the first two columns are a source node and a destination node.
-* The combinations of Node IDs do NOT have to be unique. (multiple edges)
-    * If even one of Node IDs is not defined in a node line, this edge line will be ignored.
+* However, the first three columns contains source node ID, direction, and destination node ID.
+* The combinations of node IDs do NOT have to be unique. (multiple edges)
+    * If even one of node IDs is not defined in a node line, this edge line will be ignored.
 
 Example:
 
 ```
 # EDGES
-101  104  :admires  score:20.0  since:2015
-102  103  :collaborates  since:2010
+101  ->  104  :admires  score:20.0  since:2015
+102  --  103  :collaborates  since:2010
 ```
 
 ### Datatype
@@ -79,8 +80,6 @@ The values in each datatype can be written as follows:
 
 ## Comparison
 
-### Other Formats
-
 PG
 
     # NODES
@@ -88,31 +87,18 @@ PG
     102  :person  name:"Shinzo Abe"  country:Japan
 
     # EDGES
-    101  104  :admires  score:20.0  since:2015
-    102  103  :collaborates  since:2010
+    101  ->  104  :admires  score:20.0  since:2015
+    102  --  103  :collaborates  since:2010
 
 JSON-PG
 
     {
       "nodes":[
-        {"_id":101, "_label":"person", "name":"Barack Obama", "country":"United States"}
-      , {"_id":101, "_label":"person", "name":"Shinzo Abe", "country":"United States"}
+        {"id":101, "labels":["person"], "properties":{"name":"Barack Obama", "country":"United States"}}
+      , {"id":101, "labels":["person"], "properties":{"name":"Shinzo Abe", "country":"United States"}}
       ],
       "edges":[
-        {"_from":101, "_to":104, "_label":"admires", "score":20.0, "since":2015}
-      , {"_from":102, "_to":103, "_label":"collaborates", "since":2010}
-      ]
-    }
-
-GraphSON
-
-    {
-      "nodes":[
-        {"_id":101, "_label":"person", "name":"Barack Obama", "country":"United States"}
-      , {"_id":101, "_label":"person", "name":"Shinzo Abe", "country":"United States"}
-      ],
-      "edges":[
-        {"_from":101, "_to":104, "_label":"admires", "score":20.0, "since":2015}
-      , {"_from":102, "_to":103, "_label":"collaborates", "since":2010}
+        {"from":101, "to":104, "labels":["admires"], "properties":{"score":20.0, "since":2015}}
+      , {"from":102, "to":103, "labels":["collaborates"], "properties":{"since":2010}}
       ]
     }
