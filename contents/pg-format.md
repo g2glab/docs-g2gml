@@ -27,10 +27,10 @@
     <node_id>  :<label1>  :<label2>  ..  <key1>:<value1>  <key2>:<value2>  ..
 
 * All elements are separated by space or tab.
-* Node IDs have to be unique.
+* **Node IDs** have to be unique.
     * If there are multiple lines with the same Node ID, latter ones are ignored.
-* Each line can contain arbitrarily many labels.
-* Each line can contain arbitrarily many properties.
+* Each line can contain arbitrarily many **labels**.
+* Each line can contain arbitrarily many **properties**.
 
 ### Edges
 
@@ -38,7 +38,8 @@
 
 * Basically, the same format as node lines.
 * However, the first three columns contains **source node ID**, **direction**, and **destination node ID**.
-* The combinations of node IDs do NOT have to be unique. (= multiple edges are allowed.)
+* **Edge direction** can be directed `->` or undirected `--`.
+* **The combinations of node IDs** do NOT have to be unique. (= multiple edges are allowed.)
     * If even one of node IDs is not defined in a node line, this edge line will be ignored.
 
 ### Datatype
@@ -81,8 +82,6 @@ This format basically follows the rules of general JSON format and PG format, ho
       , {"from":101, "to":102, "labels":["likes"], "properties":{"since":2015}}
       ]
     }
-
-
 
 ## Comparison
 
