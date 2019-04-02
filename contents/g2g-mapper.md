@@ -36,7 +36,7 @@ Download example g2g file:
 
 Run (mapping against SPARQL endpoint):
 
-    $ g2g musician.g2g http://ja.dbpedia.org/sparql
+    $ g2g musician.g2g http://dbpedia.org/sparql
 
 Check the output file:
 
