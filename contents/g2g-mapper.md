@@ -44,11 +44,12 @@ Check the output file:
 
 `musician.pg`
 
-    "http://ja.dbpedia.org/resource/山本あき"       "http://ja.dbpedia.org/resource/藤圭子" :influenced
-    "http://ja.dbpedia.org/resource/崎谷健次郎"     "http://ja.dbpedia.org/resource/モーリス・ラヴェル"     :influenced
-    "http://ja.dbpedia.org/resource/崎谷健次郎"     "http://ja.dbpedia.org/resource/スティーヴィー・ワンダー"       :influenced
-    "http://ja.dbpedia.org/resource/新井裕子"       "http://ja.dbpedia.org/resource/アラニス・モリセット"   :influenced
-    "http://ja.dbpedia.org/resource/星野英彦"       "http://ja.dbpedia.org/resource/バウハウス_(バンド)"    :influenced
+    "http://dbpedia.org/resource/Jin_Tielin"	->	"http://dbpedia.org/resource/Zu_Hai"	:influenced
+    "http://dbpedia.org/resource/George_Lam"	->	"http://dbpedia.org/resource/Eason_Chan"	:influenced
+    "http://dbpedia.org/resource/Aaron_Kwok"	->	"http://dbpedia.org/resource/Alien_Huang"	:influenced
+    "http://dbpedia.org/resource/Samuel_Hui"	->	"http://dbpedia.org/resource/Albert_Au"	:influenced
+    "http://dbpedia.org/resource/George_Lam"	->	"http://dbpedia.org/resource/Albert_Au"	:influenced
+
     ..
 
 ### Local File Mode
