@@ -56,6 +56,12 @@ Check the output file:
     "http://dbpedia.org/resource/Samuel_Hui"	->	"http://dbpedia.org/resource/Albert_Au"	:influenced
     "http://dbpedia.org/resource/George_Lam"	->	"http://dbpedia.org/resource/Albert_Au"	:influenced
     ..
+    "http://dbpedia.org/resource/Ville_Valo"        ->      "http://dbpedia.org/resource/Linde_Lindström"   :same_group     label:"HIM (Finnish band)"      hometown:Helsinki
+    "http://dbpedia.org/resource/Jerry_Donahue"     ->      "http://dbpedia.org/resource/Sally_Barker"      :same_group     label:Fotheringay
+    "http://dbpedia.org/resource/Line_Horntveth"    ->      "http://dbpedia.org/resource/Øystein_Moen"      :same_group     label:"Jaga Jazzist"    hometown:Norway
+    "http://dbpedia.org/resource/Adam_von_Buhler"   ->      "http://dbpedia.org/resource/Kasson_Crooker"    :same_group     label:"Splashdown (band)"       hometown:"United States"
+    "http://dbpedia.org/resource/Jeong_Jinwoon"     ->      "http://dbpedia.org/resource/Lee_Chang-min_(singer)"    :same_group     label:"2AM (band)"      hometown:"South Korea"
+    ..
 
 ### Local File Mode
 
