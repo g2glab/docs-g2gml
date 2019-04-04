@@ -44,12 +44,17 @@ Check the output file:
 
 `musician.pg`
 
+    "http://dbpedia.org/resource/Martin_Glover"     :Musician       vis_label:"Martin Glover"
+    "http://dbpedia.org/resource/Per_Wiberg"        :Musician       vis_label:"Per Wiberg"  hometown:Stockholm
+    "http://dbpedia.org/resource/Tex_Perkins"       :Musician       vis_label:"Tex Perkins"
+    "http://dbpedia.org/resource/Michelle_DaRosa"   :Musician       vis_label:"Michelle DaRosa"
+    "http://dbpedia.org/resource/Raúl_Sánchez_(musician)"   :Musician       vis_label:"Raúl Sánchez (musician)"     hometown:"Valencia, Spain"
+    ..
     "http://dbpedia.org/resource/Jin_Tielin"	->	"http://dbpedia.org/resource/Zu_Hai"	:influenced
     "http://dbpedia.org/resource/George_Lam"	->	"http://dbpedia.org/resource/Eason_Chan"	:influenced
     "http://dbpedia.org/resource/Aaron_Kwok"	->	"http://dbpedia.org/resource/Alien_Huang"	:influenced
     "http://dbpedia.org/resource/Samuel_Hui"	->	"http://dbpedia.org/resource/Albert_Au"	:influenced
     "http://dbpedia.org/resource/George_Lam"	->	"http://dbpedia.org/resource/Albert_Au"	:influenced
-
     ..
 
 ### Local File Mode
