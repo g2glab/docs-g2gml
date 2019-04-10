@@ -133,37 +133,30 @@ Check the output file:
 
 ### PG
 
-Create a general PG file.
+* Use `-f pg` or do not use `-f` option (default)
+* 1 file will be created: sample.pg
 
-    $ g2g examples/musician.g2g http://ja.dbpedia.org/sparql 
+### JSON-PG
+
+* Use `-f json`
+* 1 file will be created: sample.json
 
 ### Neo4j
 
-Create Neo4j style nodes/edges files.
+* Use `-f neo`
+* 2 files will be created: sample.neo.nodes, sample.neo.edges
 
-    $ g2g -f neo examples/musician.g2g http://ja.dbpedia.org/sparql
+### Oracle Labs PGX
 
-Remove an existing Neo4j database files.
+* Use `-f pgx`
+* 3 files will be created: sample.pgx.nodes (opv), sample.pgx.edges (ope), sample.pgx.json (config)
 
-    $ rm -r ~/work/neo4j-community-3.3.1/data/databases/graph.db
+### Amazon Nepture
 
-Import data from nodes/edges files.
+* Use `-f aws`
+* 2 files will be created: sample.aws.nodes, sample.aws.edges
 
-    $ $NEO4J_DIR/bin/neo4j-import \
-      --into $NEO4J_DIR/data/databases/graph.db \
-      --nodes output/musician.neo.nodes --relationships output/musician.neo.edges
+### Graphvis
 
-Start Neo4j console and access its browser ( http://localhost:7474/browser/ ).
-
-    $ $NEO4J_DIR/bin/neo4j console
-
-### PGX
-
-Create PGX style nodes/edges files.
-
-    $ g2g -f pgx examples/musician.g2g http://ja.dbpedia.org/sparql 
-
-Run PGX console and load the data.
-
-    $ $PGX_DIR/bin/pgx
-    pgx> G = session.readGraphWithProperties("output/musician.pgx.json")
+* Use `-f dot`
+* 1 files will be created: sample.dot
