@@ -20,7 +20,7 @@ G2GML is a RDF Graph to Property Graph Mapping Language.
 ## Minimal Examples
 
 * RDF resource > PG node
-* RDF data type property > PG node property
+* RDF datatype property > PG node property
 * RDF object property > PG edge
 
 ### RDF resource > PG node
@@ -43,7 +43,7 @@ G2GML is a RDF Graph to Property Graph Mapping Language.
     "http://example.org/person1"	 :"Person"
 
 
-### RDF data type property > PG node property
+### RDF datatype property > PG node property
 
 `mini-02.ttl`
 
