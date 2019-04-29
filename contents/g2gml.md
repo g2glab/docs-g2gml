@@ -1,6 +1,6 @@
 # G2GML
 
-G2GML is RDF Graph to Property Graph Mapping Language.
+G2GML is a RDF Graph to Property Graph Mapping Language.
 
 ## Overview
 
@@ -15,15 +15,15 @@ G2GML is RDF Graph to Property Graph Mapping Language.
     <property graph patterns>           <-- Cypher MATCH clause syntax
         <semantic graph patterns>       <-- SPARQL WHERE clause syntax
     
-    ..
+    ...
 
 ## Minimal Examples
 
-* RDF Resource > PG node
-* RDF datatype property > PG node property
+* RDF resource > PG node
+* RDF data type property > PG node property
 * RDF object property > PG edge
 
-### RDF Resource > PG node
+### RDF resource > PG node
 
 `mini-01.ttl`
 
@@ -43,7 +43,7 @@ G2GML is RDF Graph to Property Graph Mapping Language.
     "http://example.org/person1"	 :"Person"
 
 
-### RDF datatype property > PG node property
+### RDF data type property > PG node property
 
 `mini-02.ttl`
 
@@ -83,7 +83,7 @@ G2GML is RDF Graph to Property Graph Mapping Language.
 
     "http://example.org/person1"	 :"Person"
     "http://example.org/person2"	 :"Person"
-    "http://example.org/person1"	"http://example.org/person2"	 :"follows"
+    "http://example.org/person1"	->	"http://example.org/person2"	:follows
 
 ## Actual Examples
 
@@ -101,7 +101,7 @@ G2GML is RDF Graph to Property Graph Mapping Language.
     (mus:Musician {vis_label:nam, born:dat, hometown:twn, pageLength:len})
         ?mus rdf:type foaf:Person, dbpedia-owl:MusicalArtist .
         ?mus rdfs:label ?nam .
-        FILTER(lang(?nam) = "ja") .
+        FILTER(lang(?nam) = "en") .
         OPTIONAL { ?mus prop-ja:born ?dat }
         OPTIONAL { ?mus dbpedia-owl:hometown / rdfs:label ?twn }
         OPTIONAL { ?mus dbpedia-owl:wikiPageLength ?len }
@@ -112,7 +112,7 @@ G2GML is RDF Graph to Property Graph Mapping Language.
         ?grp a schema:MusicGroup ;
              dbpedia-owl:bandMember ?mus1 , ?mus2 .
         FILTER(?mus1 != ?mus2)
-        OPTIONAL { ?grp rdfs:label ?nam. FILTER(lang(?nam) = "ja")}
+        OPTIONAL { ?grp rdfs:label ?nam. FILTER(lang(?nam) = "en")}
         OPTIONAL { ?grp dbpedia-owl:hometown / rdfs:label ?twn }
         OPTIONAL { ?grp dbpedia-owl:wikiPageLength ?len }
 

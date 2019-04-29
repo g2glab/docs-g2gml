@@ -18,9 +18,9 @@ Create Neo4j style nodes/edges files.
     $ alias pg2neo='docker run --rm -v $PWD:/work g2gml/pg:x.x.x pg2neo'
     $ pg2neo data.pg
 
-Remove an existing Neo4j database files.
+Remove existing Neo4j database files.
 
-    $ rm -r ~/work/neo4j-community-3.3.1/data/databases/graph.db
+    $ rm -r $NEO4J_DIR/data/databases/graph.db
 
 Import data from nodes/edges files.
 

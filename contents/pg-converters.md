@@ -1,5 +1,22 @@
 # PG Converters
 
+## Installation
+
+If **Docker** is installed on your machine, run the following.
+
+    $ alias pg2dot='docker run --rm -v $PWD:/work g2gml/pg:x.x.x pg2dot'
+    $ pg2dot --version
+    0.3.1
+
+Otherwise, install **Git** and **Node**, then run the following.
+  
+    $ git clone -b vx.x.x https://github.com/g2gml/pg.git
+    $ cd pg
+    $ npm install
+    $ npm link
+    $ pg2dot --version
+    0.3.1
+
 ## Quick Start
 
 Create sample data.
@@ -13,10 +30,9 @@ Create sample data.
     p1 -> p2 :likes  since:2013
     p1 -- p2 :friend since:2011
 
-Run `pg2dot` command for example.
+Run the `pg2dot` command for example.
 
-    $ alias pg2dot='docker run --rm -v $PWD:/work g2gml/pg:0.3.1 pg2dot'
-    $ pg2pgx data.pg data
+    $ pg2dot data.pg data
     "data.dot" has been created.
 
 `data.dot`
@@ -36,22 +52,6 @@ You can generate a PNG image using graphviz.
 
 ![data](https://user-images.githubusercontent.com/4862919/54224265-658d3380-44b6-11e9-8f24-9a0ffef9c40d.png)
 
-## Installation
-
-If **Docker** is installed on your machine, run the following.
-
-    $ alias pg2dot='docker run --rm -v $PWD:/work g2gml/pg:0.3.1 pg2dot'
-    $ pg2dot --version
-    0.3.1
-
-Otherwise, install **Git** and **Node**, then run the following.
-  
-    $ git clone -b v0.3.1 https://github.com/g2gml/pg.git
-    $ cd pg
-    $ npm install
-    $ npm link
-    $ pg2dot --version
-    0.3.1
 
 ## Commands
 
