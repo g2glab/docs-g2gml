@@ -10,7 +10,7 @@ If **Docker** is installed on your machine, run the following.
 
 Otherwise, install **Git** and **Node**, then run the following.
   
-    $ git clone -b vx.x.x https://github.com/g2gml/pg.git
+    $ git clone -b vx.x.x https://github.com/g2glab/pg.git
     $ cd pg
     $ npm install
     $ npm link

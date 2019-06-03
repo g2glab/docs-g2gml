@@ -4,7 +4,7 @@
 
 To understand how G2GML works quickly, please visit the sandbox.
 
-* [http://g2g.bio/sandbox/](http://g2g.bio/sandbox/)
+* [http://g2g.fun/sandbox/](http://g2g.fun/sandbox/)
 
 ## Quick Start
 

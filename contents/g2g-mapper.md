@@ -16,7 +16,7 @@ Check if it works:
 
 Download example g2g file:
 
-    $ wget https://raw.githubusercontent.com/g2gml/g2g/master/examples/musician/musician.g2g
+    $ wget https://raw.githubusercontent.com/g2glab/g2g/master/examples/musician/musician.g2g
     
 `musician.g2g`
 
@@ -67,7 +67,7 @@ Check the output file:
 
 Download example turtle file:
 
-    $ wget https://raw.githubusercontent.com/g2gml/g2g/master/examples/mini-05/mini-05.ttl
+    $ wget https://raw.githubusercontent.com/g2glab/g2g/master/examples/mini-05/mini-05.ttl
     
 `mini-05.ttl`
     
@@ -81,7 +81,7 @@ Download example turtle file:
     
 Download example g2g file:
 
-    $ wget https://raw.githubusercontent.com/g2gml/g2g/master/examples/mini-05/mini-05.g2g
+    $ wget https://raw.githubusercontent.com/g2glab/g2g/master/examples/mini-05/mini-05.g2g
     
 `mini-05.g2g`
 
