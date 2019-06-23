@@ -98,7 +98,7 @@ In this work, we defined **G2GML** for mapping RDF graphs to property graphs and
 
 ## For more information
 
-* Project Home - [https://github.com/g2gml](https://github.com/g2gml)
-* G2G Sandbox - [http://g2g.bio](http://g2g.bio)
+* Project Home - [https://github.com/g2glab](https://github.com/g2glab)
+* G2G Sandbox - [http://g2g.fun](http://g2g.fun)
 * For Citation - [https://arxiv.org/abs/1812.01801](https://arxiv.org/abs/1812.01801)
 
