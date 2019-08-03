@@ -7,7 +7,4 @@ G2GML Documentation
    contents/get-started
    contents/g2gml
    contents/g2g-mapper
-   contents/pg-format
-   contents/pg-converters
-   contents/references
-   contents/appendix
+   contents/reference
