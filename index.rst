@@ -7,4 +7,4 @@ G2GML Documentation
    contents/get-started
    contents/g2gml
    contents/g2g-mapper
-   contents/reference
+   Reference <contents/reference>
