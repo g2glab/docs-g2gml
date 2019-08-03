@@ -1,4 +1,6 @@
-# Mapping RDF Graphs to Property Graphs
+# Reference
+
+**"Mapping RDF Graphs to Property Graphs"**
 
 [https://arxiv.org/abs/1812.01801](https://arxiv.org/abs/1812.01801)
 
