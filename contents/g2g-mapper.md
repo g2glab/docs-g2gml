@@ -6,7 +6,7 @@
 
 Set an alias to run docker container:
 
-    $ alias g2g='docker run --rm -v $PWD:/work g2gml/g2g:x.x.x g2g'
+    $ alias g2g='docker run --rm -v $PWD:/work g2glab/g2g:0.3.5 g2g'
 
 Check if it works:
 
