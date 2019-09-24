@@ -4,7 +4,7 @@
 
 To understand how G2GML works quickly, please visit the sandbox.
 
-* [http://g2g.fun/sandbox/](http://g2g.fun/sandbox/)
+* [http://g2g.fun](http://g2g.fun)
 
 Some usage samples are provided.
 Notice that in order to use the sandbox effectively, knowledge about RDF and SPARQL are strongly recommended.
