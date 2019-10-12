@@ -66,7 +66,7 @@ Check the output file:
     "http://example.org/person2"	:person
     "http://example.org/person1"	->	"http://example.org/person2"	:follows	since:2017
 
-For furthur details please refer to
+For further details please refer to
 * [G2GML](https://g2gml.readthedocs.io/en/latest/contents/g2gml.html): Description of the mapping language.
 * [G2G Mapper](https://g2gml.readthedocs.io/en/latest/contents/g2g-mapper.html): Usage of the command line tool.
 
