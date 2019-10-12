@@ -1,8 +1,6 @@
 # G2G Mapper
 
-## Quick Start
-
-### Installation
+## Installation
 
 Set an alias to run docker container:
 
@@ -12,7 +10,20 @@ Check if it works:
 
     $ g2g --help
 
-### Endpoint Mode
+## Usage
+
+    Usage:
+
+      ＄ g2g [options] <g2gml_file> <data_source>
+
+    Options:
+
+      -V, --version              shows the version number
+      -f, --format [format]      format of results <rq|pg|pgx|neo|dot|aws|all (default: pg)>
+      -o, --output_dir [prefix]  output directory (default: output/<input_prefix>)
+      -h, --help                 output usage information
+
+## Endpoint Mode
 
 Download example g2g file:
 
@@ -63,7 +74,7 @@ Check the output file:
     "http://dbpedia.org/resource/Jeong_Jinwoon"     ->      "http://dbpedia.org/resource/Lee_Chang-min_(singer)"    :same_group     label:"2AM (band)"      hometown:"South Korea"
     ...
 
-### Local File Mode
+## Local File Mode
 
 Download example turtle file:
 
@@ -109,25 +120,11 @@ Check the output file:
     "http://example.org/person2"	:person
     "http://example.org/person1"	->	"http://example.org/person2"	:follows	since:2017
 
-
-## Usage
-
-    Usage:
-
-      ＄ g2g [options] <g2gml_file> <data_source>
-
-    Options:
-
-      -V, --version              shows the version number
-      -f, --format [format]      format of results <rq|pg|pgx|neo|dot|aws|all (default: pg)>
-      -o, --output_dir [prefix]  output directory (default: output/<input_prefix>)
-      -h, --help                 output usage information
-
-## Behaviour
+## Internal Behaviour
 
  1. Interprets G2GML and generates SPARQL queries to retrieve data
  2. Issues SPARQL queries against public endpoints or given RDF data
- 3. Obtains the query results and saves it in PG format
+ 3. Obtains the query results and transforms it into PG format
  4. (optional) Translates PG data into specific formats for graph databases
 
 ## Output Formats
@@ -136,6 +133,7 @@ Check the output file:
 
 * Use `-f pg` or no `-f` option (default)
 * Number of output files: 1 (sample.pg)
+* [PG tools](https://pg-format.readthedocs.io/en/latest/) can transform PG into other formats.
 
 ### JSON-PG
 
