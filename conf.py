@@ -20,8 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'G2GML'
-copyright = '2019, ryotayamanaka'
-author = 'ryotayamanaka'
+copyright = '2019, g2glab'
+author = 'g2glab'
 
 # The short X.Y version
 version = ''
@@ -134,7 +134,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'g2gml.tex', 'g2gml Documentation',
-     'ryotayamanaka', 'manual'),
+     'g2glab', 'manual'),
 ]
 
 
@@ -177,3 +177,6 @@ epub_title = project
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
 
+# -- Addional parameters -----------------------------------------------------
+
+html_logo = 'g2glab_g2g.png'
