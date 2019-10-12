@@ -1,16 +1,14 @@
 # G2GML
 
-G2GML is a RDF Graph to Property Graph Mapping Language.
+The Graph To Graph Mapping Language (G2GML) is a language to describe mapping from **[RDF graphs](https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/)** to **property graphs**.
 
 ## Overview
-
-* G2GML defines mapping from RDF graphs to property graphs.
 * Mapping is described with a set of pairs of **RDF graph patterns** and **property graph patterns**.
 * RDF graph patterns are written in WHERE clause syntax of **SPARQL**, while the property graph patterns are written in MATCH clause syntax of **Cypher**.
 
-`sample.g2g`
+`Structure of G2GML`
 
-    <prefix>
+    <prefixes>
     
     <property graph patterns>           <-- Cypher MATCH clause syntax
         <semantic graph patterns>       <-- SPARQL WHERE clause syntax
