@@ -22,21 +22,6 @@ Check if it works:
 
 ### Execution
 
-Download example files:
-
-    $ wget https://raw.githubusercontent.com/g2glab/g2g/master/examples/musician/musician.g2g
-    $ wget https://raw.githubusercontent.com/g2glab/g2g/master/examples/mini-05/mini-05.ttl
-
-Run 
-
-    $ g2g 
-
-Check the output file:
-
-    $ more output/musician/musician.pg
-
-    
-`musician.g2g`
 Download example turtle file:
 
     $ wget https://raw.githubusercontent.com/g2glab/g2g/master/examples/mini-05/mini-05.ttl
@@ -81,7 +66,10 @@ Check the output file:
     "http://example.org/person2"	:person
     "http://example.org/person1"	->	"http://example.org/person2"	:follows	since:2017
 
+For furthur details please refer to
+* [G2GML](https://g2gml.readthedocs.io/en/latest/contents/g2gml.html): Description of the mapping language.
+* [G2G Mapper](https://g2gml.readthedocs.io/en/latest/contents/g2g-mapper.html): Usage of the command line tool.
 
 ## Related tools
 
-* [PG Converters](https://g2gml.readthedocs.io/en/latest/contents/pg-converters.html)
+* [PG Tools](https://pg-format.readthedocs.io/en/latest/): Tools to manage resulting property graph files.
