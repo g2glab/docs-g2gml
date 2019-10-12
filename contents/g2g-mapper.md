@@ -2,13 +2,20 @@
 
 ## Installation
 
-Set an alias to run docker container:
+If **Docker** is installed on your machine, run the following.
 
     $ alias g2g='docker run --rm -v $PWD:/work g2glab/g2g:0.3.5 g2g'
+    $ g2g --version
+    0.3.5
 
-Check if it works:
-
-    $ g2g --help
+Otherwise, install **Git** and **Node**, then run the following.
+  
+    $ git clone -b vx.x.x https://github.com/g2glab/g2g.git
+    $ cd g2g
+    $ npm install
+    $ npm link
+    $ g2g --version
+    0.3.1
 
 ## Usage
 
