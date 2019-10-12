@@ -1,2 +1,3 @@
-# docs
-https://g2gml.readthedocs.io/
+# G2GML documentation
+
+[Read the Docs](https://g2gml.readthedocs.io/)
