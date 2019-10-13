@@ -2,20 +2,20 @@
 
 ## Installation
 
-If **Docker** is installed on your machine, run the following.
+If **Docker** is installed on your machine, run the following:
 
     $ alias g2g='docker run --rm -v $PWD:/work g2glab/g2g:0.3.5 g2g'
     $ g2g --version
     0.3.5
 
-Otherwise, install **Git** and **Node**, then run the following.
+Otherwise, install **Git** and **Node**, then run the following:
   
-    $ git clone -b vx.x.x https://github.com/g2glab/g2g.git
+    $ git clone -b v0.3.5 https://github.com/g2glab/g2g.git
     $ cd g2g
     $ npm install
     $ npm link
     $ g2g --version
-    0.3.1
+    0.3.5
 
 ## Usage
 
@@ -140,7 +140,7 @@ Check the output file:
 
 * Use `-f pg` or no `-f` option (default)
 * Number of output files: 1 (sample.pg)
-* [PG tools](https://pg-format.readthedocs.io/en/latest/) can transform PG into other formats.
+* [PG tools](https://pg-format.readthedocs.io/en/latest/) can transform PG into other common formats.
 
 ### JSON-PG
 
@@ -162,7 +162,7 @@ Check the output file:
 * Use `-f aws`
 * Number of output files: 2 (sample.aws.nodes, sample.aws.edges)
 
-### Graphvis
+### Graphviz
 
 * Use `-f dot`
 * Number of output files: 1 (sample.dot)
