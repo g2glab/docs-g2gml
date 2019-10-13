@@ -12,7 +12,7 @@ Notice that in order to use the sandbox effectively, knowledge about RDF and SPA
 ## Command Line Usage
 ### Installation
 
-Set an alias to run docker container:
+Set an alias to run a docker container:
 
     $ alias g2g='docker run --rm -v $PWD:/work g2glab/g2g:0.3.5 g2g'
 
