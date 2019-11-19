@@ -23,7 +23,7 @@ The Graph To Graph Mapping Language (G2GML) is a language for mapping **[RDF gra
 
 ### RDF resource > PG node
 
-![mini-01](https://user-images.githubusercontent.com/4862919/69172754-b7cf2b80-0afe-11ea-8c93-594a1b2efb66.png)
+![](https://user-images.githubusercontent.com/4862919/69172754-b7cf2b80-0afe-11ea-8c93-594a1b2efb66.png)
 
 Input: `mini-01.ttl`
 
@@ -44,7 +44,7 @@ Output: `mini-01.pg`
 
 ### RDF datatype property > PG node property
 
-![mini-02](https://user-images.githubusercontent.com/4862919/69172807-d03f4600-0afe-11ea-8127-d5298b2c0ddf.png)
+![](https://user-images.githubusercontent.com/4862919/69172807-d03f4600-0afe-11ea-8127-d5298b2c0ddf.png)
 
 Input: `mini-02.ttl`
 
@@ -65,7 +65,7 @@ Output: `mini-02.pg`
 
 ### RDF object property > PG edge
 
-![mini-03](https://user-images.githubusercontent.com/4862919/69172887-efd66e80-0afe-11ea-9621-9673831b658f.png)
+![](https://user-images.githubusercontent.com/4862919/69172887-efd66e80-0afe-11ea-9621-9673831b658f.png)
 
 Input: `mini-03.ttl`
 
@@ -90,7 +90,7 @@ Output: `mini-03.pg`
 
 ### RDF resource > PG edge
 
-![mini-04](https://user-images.githubusercontent.com/4862919/69172844-dfbe8f00-0afe-11ea-9176-7777a4043821.png)
+![](https://user-images.githubusercontent.com/4862919/69172844-dfbe8f00-0afe-11ea-9176-7777a4043821.png)
 
 Input: `mini-04.ttl`
 
@@ -118,7 +118,7 @@ Output: `mini-04.pg`
 
 ### RDF datatype property > PG edge property
 
-![mini-05](https://user-images.githubusercontent.com/4862919/69173333-d7b31f00-0aff-11ea-8858-da01e750c6af.png)
+![](https://user-images.githubusercontent.com/4862919/69173333-d7b31f00-0aff-11ea-8858-da01e750c6af.png)
 
 Input: `mini-05.ttl`
 
