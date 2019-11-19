@@ -23,65 +23,58 @@ The Graph To Graph Mapping Language (G2GML) is a language for mapping **[RDF gra
 
 ### RDF resource > PG node
 
-Input:
+![mini-01](https://user-images.githubusercontent.com/4862919/69172754-b7cf2b80-0afe-11ea-8c93-594a1b2efb66.png)
 
-`mini-01.ttl`
+Input: `mini-01.ttl`
 
     @prefix : <http://example.org/> .
     :person1 a :Person .
 
-Mapping:
 
-`mini-01.g2g`
+Mapping: `mini-01.g2g`
 
     PREFIX : <http://example.org/>
     (p:Person)                          <-- PG node is defined
         ?p a :Person .
 
-Output:
-
-`mini-01.pg`
+Output: `mini-01.pg`
 
     "http://example.org/person1"	 :"Person"
 
 
 ### RDF datatype property > PG node property
 
-Input:
+![mini-02](https://user-images.githubusercontent.com/4862919/69172807-d03f4600-0afe-11ea-8127-d5298b2c0ddf.png)
 
-`mini-02.ttl`
+Input: `mini-02.ttl`
 
     @prefix : <http://example.org/> .
     :person1 a :Person .
     :person1 :age 30 .
-Mapping:
 
-`mini-02.g2g`
+Mapping: `mini-02.g2g`
 
     PREFIX : <http://example.org/>
     (p:Person {age:a})                 <-- PG node property is defined
         ?p a :Person .
         ?p :age ?a .
-Output:
 
-`mini-02.pg`
+Output: `mini-02.pg`
 
     "http://example.org/person1"	 :"Person"	"age":30
 
 ### RDF object property > PG edge
 
-Input:
+![mini-03](https://user-images.githubusercontent.com/4862919/69172887-efd66e80-0afe-11ea-9621-9673831b658f.png)
 
-`mini-03.ttl`
+Input: `mini-03.ttl`
 
     @prefix : <http://example.org/> .
     :person1 a :Person .
     :person2 a :Person .
     :person1 :follows :person2 .
 
-Mapping:
-
-`mini-03.g2g`
+Mapping: `mini-03.g2g`
 
     PREFIX : <http://example.org/>
     (p:Person)
@@ -89,13 +82,69 @@ Mapping:
     (p1:Person)-[:follows]->(p2:Person)       <-- PG edge is defined
         ?p1 :follows ?p2 .
 
-Output:
-
-`mini-03.pg`
+Output: `mini-03.pg`
 
     "http://example.org/person1"	 :"Person"
     "http://example.org/person2"	 :"Person"
     "http://example.org/person1"	->	"http://example.org/person2"	:follows
+
+### RDF resource > PG edge
+
+![mini-04](https://user-images.githubusercontent.com/4862919/69172844-dfbe8f00-0afe-11ea-9176-7777a4043821.png)
+
+Input: `mini-04.ttl`
+
+    @prefix : <http://example.org/> .
+    :person1 a :Person .
+    :person2 a :Person .
+    [] a :Follow ;
+       :follower :person1 ;
+       :followed :person2 .    
+
+Mapping: `mini-04.g2g`
+
+    PREFIX : <http://example.org/>
+    (p:Person)
+        ?p a :Person .
+    (p1:Person)-[:follow]->(p2:Person)       <-- PG edge is defined
+        ?f :follower ?p1 ;
+           :followed ?p2 .
+
+Output: `mini-04.pg`
+
+    "http://example.org/person1"	 :"Person"
+    "http://example.org/person2"	 :"Person"
+    "http://example.org/person1"	"http://example.org/person2"	 :"follow"
+
+### RDF datatype property > PG edge property
+
+![mini-05](https://user-images.githubusercontent.com/4862919/69173333-d7b31f00-0aff-11ea-8858-da01e750c6af.png)
+
+Input: `mini-05.ttl`
+
+    @prefix : <http://example.org/> .
+    :person1 a :Person .
+    :person2 a :Person .
+    [] a :Follow ;
+       :follower :person1 ;
+       :followed :person2 ;
+       :since 2017 .
+
+Mapping: `mini-05.g2g`
+
+    PREFIX : <http://example.org/>
+    (p:Person)
+        ?p a :Person .
+    (p1:Person)-[:follow {since:s}]->(p2:Person)  <-- PG edge is defined
+        ?f :follower ?p1 ;
+           :followed ?p2 ;
+           :since ?s .
+
+Output: `mini-05.pg`
+
+    "http://example.org/person1"	 :"Person"
+    "http://example.org/person2"	 :"Person"
+    "http://example.org/person1"	"http://example.org/person2"	 :"follow"	"since":2017
 
 ## Actual Example
 
