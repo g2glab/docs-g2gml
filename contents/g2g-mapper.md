@@ -4,18 +4,18 @@
 
 If **Docker** is installed on your machine, run the following:
 
-    $ alias g2g='docker run --rm -v $PWD:/work g2glab/g2g:0.3.5 g2g'
+    $ alias g2g='docker run --rm -v $PWD:/work g2glab/g2g:0.3.6 g2g'
     $ g2g --version
-    0.3.5
+    0.3.6
 
 Otherwise, install **Git** and **Node**, then run the following:
   
-    $ git clone -b v0.3.5 https://github.com/g2glab/g2g.git
+    $ git clone -b v0.3.6 https://github.com/g2glab/g2g.git
     $ cd g2g
     $ npm install
     $ npm link
     $ g2g --version
-    0.3.5
+    0.3.6
 
 ## Usage
 
