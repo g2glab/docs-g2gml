@@ -34,12 +34,12 @@ Input: `mini-01.ttl`
 Mapping: `mini-01.g2g`
 
     PREFIX : <http://example.org/>
-    (p:Person)                          <-- PG node is defined
+    (p:person)                          <-- PG node is defined
         ?p a :Person .
 
 Output: `mini-01.pg`
 
-    "http://example.org/person1"	 :"Person"
+    "http://example.org/person1" :person
 
 
 ### RDF datatype property > PG node property
@@ -55,13 +55,13 @@ Input: `mini-02.ttl`
 Mapping: `mini-02.g2g`
 
     PREFIX : <http://example.org/>
-    (p:Person {age:a})                 <-- PG node property is defined
+    (p:person {age:a})                 <-- PG node property is defined
         ?p a :Person .
         ?p :age ?a .
 
 Output: `mini-02.pg`
 
-    "http://example.org/person1"	 :"Person"	"age":30
+    "http://example.org/person1" :person age:30
 
 ### RDF object property > PG edge
 
@@ -77,16 +77,16 @@ Input: `mini-03.ttl`
 Mapping: `mini-03.g2g`
 
     PREFIX : <http://example.org/>
-    (p:Person)
+    (p:person)
         ?p a :Person .
-    (p1:Person)-[:follows]->(p2:Person)       <-- PG edge is defined
+    (p1:person)-[:follows]->(p2:person)       <-- PG edge is defined
         ?p1 :follows ?p2 .
 
 Output: `mini-03.pg`
 
-    "http://example.org/person1"	 :"Person"
-    "http://example.org/person2"	 :"Person"
-    "http://example.org/person1"	->	"http://example.org/person2"	:follows
+    "http://example.org/person1" :person
+    "http://example.org/person2" :person
+    "http://example.org/person1" -> "http://example.org/person2" :follows
 
 ### RDF resource > PG edge
 
@@ -104,17 +104,17 @@ Input: `mini-04.ttl`
 Mapping: `mini-04.g2g`
 
     PREFIX : <http://example.org/>
-    (p:Person)
+    (p:person)
         ?p a :Person .
-    (p1:Person)-[:follow]->(p2:Person)       <-- PG edge is defined
+    (p1:person)-[:follow]->(p2:person)       <-- PG edge is defined
         ?f :follower ?p1 ;
            :followed ?p2 .
 
 Output: `mini-04.pg`
 
-    "http://example.org/person1"	 :"Person"
-    "http://example.org/person2"	 :"Person"
-    "http://example.org/person1"	"http://example.org/person2"	 :"follow"
+    "http://example.org/person1" :person
+    "http://example.org/person2" :person
+    "http://example.org/person1" "http://example.org/person2" :follow
 
 ### RDF datatype property > PG edge property
 
@@ -133,18 +133,18 @@ Input: `mini-05.ttl`
 Mapping: `mini-05.g2g`
 
     PREFIX : <http://example.org/>
-    (p:Person)
+    (p:person)
         ?p a :Person .
-    (p1:Person)-[:follow {since:s}]->(p2:Person)  <-- PG edge is defined
+    (p1:person)-[:follows {since:s}]->(p2:person)    <-- PG edge is defined
         ?f :follower ?p1 ;
            :followed ?p2 ;
            :since ?s .
 
 Output: `mini-05.pg`
 
-    "http://example.org/person1"	 :"Person"
-    "http://example.org/person2"	 :"Person"
-    "http://example.org/person1"	"http://example.org/person2"	 :"follow"	"since":2017
+    "http://example.org/person1" :person
+    "http://example.org/person2" :person
+    "http://example.org/person1" "http://example.org/person2" :follow since:2017
 
 ## Actual Example
 
@@ -158,7 +158,7 @@ Output: `mini-05.pg`
     PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
     # Node mappings
-    (mus:Musician {vis_label:nam, born:dat, hometown:twn, pageLength:len})
+    (mus:musician {vis_label:nam, born:dat, hometown:twn, page_length:len})
         ?mus rdf:type foaf:Person, dbpedia-owl:MusicalArtist .
         ?mus rdfs:label ?nam .
         FILTER(lang(?nam) = "en") .
@@ -167,7 +167,7 @@ Output: `mini-05.pg`
         OPTIONAL { ?mus dbpedia-owl:wikiPageLength ?len }
 
     # Edge mappings
-    (mus1:Musician)-[:same_group {label:nam, hometown:twn, pageLength:len}]->(mus2:Musician)
+    (mus1:musician)-[:same_group {label:nam, hometown:twn, page_length:len}]->(mus2:musician)
         ?grp a schema:MusicGroup.
         { ?grp dbpedia-owl:bandMember ?mus1 , ?mus2. } UNION
         { ?grp dbpedia-owl:formerBandMember ?mus1 , ?mus2. }
@@ -176,5 +176,5 @@ Output: `mini-05.pg`
         OPTIONAL { ?grp dbpedia-owl:hometown / rdfs:label ?twn. FILTER(lang(?twn) = "en"). }
         OPTIONAL { ?grp dbpedia-owl:wikiPageLength ?len }
 
-    (mus1:Musician)-[:influenced]->(mus2:Musician)
+    (mus1:musician)-[:influenced]->(mus2:musician)
         ?mus1 dbpedia-owl:influenced ?mus2 .

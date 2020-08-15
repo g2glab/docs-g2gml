@@ -4,12 +4,13 @@
 
 To understand how G2GML works quickly, please visit the sandbox.
 
-* [http://g2g.fun](http://g2g.fun)
+* [http://purl.org/g2gml](http://purl.org/g2gml)
 
 Some usage samples are provided.
 Notice that in order to use the sandbox effectively, knowledge about RDF and SPARQL are strongly recommended.
 
 ## Command Line Usage
+
 ### Installation
 
 Set an alias to run a docker container:
@@ -62,11 +63,12 @@ Check the output file:
 
 `mini-05.pg`
 
-    "http://example.org/person1"	:person
-    "http://example.org/person2"	:person
-    "http://example.org/person1"	->	"http://example.org/person2"	:follows	since:2017
+    "http://example.org/person1" :person
+    "http://example.org/person2" :person
+    "http://example.org/person1" -> "http://example.org/person2" :follows since:2017
 
-For further details please refer to
+For further details please refer to:
+
 * [G2GML](https://g2gml.readthedocs.io/en/latest/contents/g2gml.html): Description of the mapping language.
 * [G2G Mapper](https://g2gml.readthedocs.io/en/latest/contents/g2g-mapper.html): Usage of the command line tool.
 

@@ -55,13 +55,13 @@ For this conversion, the actual G2GML is described as in **Figure 5**. It starts
     PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
     PREFIX foaf: <http://xmlns.com/foaf/0.1/>
     # Node mapping
-    (mus:Musician {vis_label:nam, born:dat, hometown:twn})                  # PG Pattern
+    (mus:musician {vis_label:nam, born:dat, hometown:twn})                  # PG Pattern
       ?mus rdf:type foaf:Person, dbpedia-owl:MusicalArtist .                # RDF Pattern
       ?mus rdfs:label ?nam .
       OPTIONAL { ?mus prop:born ?dat }
       OPTIONAL { ?mus dbpedia-owl:hometown / rdfs:label ?twn }
     # Edge mapping
-    (mus1:Musician)-[:same_group {label:nam, length:len}]->(mus2:Musician)  # PG Pattern
+    (mus1:musician)-[:same_group {label:nam, length:len}]->(mus2:musician)  # PG Pattern
       ?grp a schema:MusicGroup ;                                            # RDF Pattern
       dbpedia-owl:bandMember ?mus1 , ?mus2 .
       FILTER(?mus1 != ?mus2)
