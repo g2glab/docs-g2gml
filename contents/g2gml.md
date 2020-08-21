@@ -106,7 +106,7 @@ Mapping: `mini-04.g2g`
     PREFIX : <http://example.org/>
     (p:person)
         ?p a :Person .
-    (p1:person)-[:follow]->(p2:person)       <-- PG edge is defined
+    (p1:person)-[:follows]->(p2:person)       <-- PG edge is defined
         ?f :follower ?p1 ;
            :followed ?p2 .
 
@@ -114,7 +114,7 @@ Output: `mini-04.pg`
 
     "http://example.org/person1" :person
     "http://example.org/person2" :person
-    "http://example.org/person1" "http://example.org/person2" :follow
+    "http://example.org/person1" "http://example.org/person2" :follows
 
 ### RDF datatype property > PG edge property
 
@@ -144,7 +144,7 @@ Output: `mini-05.pg`
 
     "http://example.org/person1" :person
     "http://example.org/person2" :person
-    "http://example.org/person1" "http://example.org/person2" :follow since:2017
+    "http://example.org/person1" "http://example.org/person2" :follows since:2017
 
 ## Actual Example
 
