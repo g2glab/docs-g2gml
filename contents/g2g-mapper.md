@@ -48,7 +48,7 @@ Download example g2g file:
     ...
     
     # Edge mappings
-    (mus1:musician)-[:same_group {label:nam, hometown:twn, page_length:len}]->(mus2:Musician)
+    (mus1:musician)-[:same_group {label:nam, hometown:twn, page_length:len}]->(mus2:musician)
         ?grp a schema:MusicGroup ;
     ...
 
