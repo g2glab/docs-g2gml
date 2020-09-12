@@ -43,7 +43,7 @@ Download example g2g file:
     ...
     
     # Node mappings
-    (mus:musician {vis_label:nam, born:dat, hometown:twn, pageLength:len})
+    (mus:musician {vis_label:nam, born:dat, hometown:twn, page_length:len})
         ?mus rdf:type foaf:Person, dbpedia-owl:MusicalArtist .
     ...
     
