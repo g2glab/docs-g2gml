@@ -17,6 +17,8 @@ Otherwise, install **Git** and **Node**, then run the following:
     $ g2g --version
     0.3.7
     
+If you use local file mode without Docker, install **Apache Jena ARQ** and make sure that ```arq``` command can be executed.
+    
 ### Testing installation
 
 If you want to check whether your installation works correct, run the following:
