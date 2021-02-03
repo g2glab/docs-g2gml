@@ -4,32 +4,36 @@
 
 If **Docker** is installed on your machine, run the following:
 
-    $ alias g2g='docker run --rm -v $PWD:/work g2glab/g2g:0.3.7 g2g'
+    $ alias g2g='docker run --rm -v $PWD:/work g2glab/g2g:0.3.8 g2g'
     $ g2g --version
-    0.3.7
+    0.3.8
 
 Otherwise, install **Git** and **Node**, then run the following:
   
-    $ git clone -b v0.3.7 https://github.com/g2glab/g2g.git
+    $ git clone -b v0.3.8 https://github.com/g2glab/g2g.git
     $ cd g2g
-    $ npm install
-    $ npm link
+    $ sh install.sh
     $ g2g --version
-    0.3.7
+    0.3.8
     
-If you use local file mode without Docker, install **Apache Jena ARQ** and make sure that ```arq``` command can be executed.
-    
+If you use local file mode without Docker, install **Apache Jena ARQ** and make sure that `arq` command can be executed.
+
+    $ cd ~
+    $ wget http://ftp.jaist.ac.jp/pub/apache/jena/binaries/apache-jena-3.17.0.zip
+    $ unzip apache-jena-3.17.0.zip
+    $ export PATH=$PATH:~/apache-jena-3.17.0/bin
+
 ### Testing installation
 
 If you want to check whether your installation works correct, run the following:
 
 (With Docker)
 
-    $ docker run --rm -v $PWD:/work g2glab/g2g:0.3.7 bash -c "cd /opt/g2g && npm test"
+    $ docker run --rm g2glab/g2g:0.3.8 bash -c "cd /opt/g2g && sh test.sh"
 
 (Without Docker)
     
-    $ npm test
+    $ sh test.sh
 
 ## Usage
 
